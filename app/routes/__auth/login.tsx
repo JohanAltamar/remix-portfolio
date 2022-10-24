@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { Link } from "@remix-run/react";
-import { json } from "@remix-run/node";
+import { json, redirect } from "@remix-run/node";
 
 import { validateEmail, validatePassword } from "~/utils/validators.server";
-import { login } from "~/utils/auth.server";
+import { getUser, login } from "~/utils/auth.server";
 
 // Types
-import type { ActionFunction } from "@remix-run/node";
+import type { ActionFunction, LoaderFunction } from "@remix-run/node";
 
 // Components
 import { FormField } from "~/components/form-field";
@@ -37,6 +37,10 @@ export const action: ActionFunction = async ({ request }) => {
     );
 
   return await login({ email, password });
+};
+
+export const loader: LoaderFunction = async ({ request }) => {
+  return (await getUser(request)) ? redirect("/") : null;
 };
 
 export default function Login() {
