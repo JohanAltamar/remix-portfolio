@@ -1,8 +1,43 @@
-import { Link } from "@remix-run/react";
 import { useState } from "react";
+import { Link } from "@remix-run/react";
+import { json } from "@remix-run/node";
+
+import { validateEmail, validatePassword } from "~/utils/validators.server";
+import { login } from "~/utils/auth.server";
+
+// Types
+import type { ActionFunction } from "@remix-run/node";
 
 // Components
 import { FormField } from "~/components/form-field";
+
+export const action: ActionFunction = async ({ request }) => {
+  const form = await request.formData();
+  const action = "login";
+  const email = form.get("email");
+  const password = form.get("password");
+
+  if (typeof email !== "string" || typeof password !== "string") {
+    return json({ error: `Invalid Form Data`, form: action }, { status: 400 });
+  }
+
+  const errors = {
+    email: validateEmail(email),
+    password: validatePassword(password),
+  };
+
+  if (Object.values(errors).some(Boolean))
+    return json(
+      {
+        errors,
+        fields: { email, password },
+        form: action,
+      },
+      { status: 400 }
+    );
+
+  return await login({ email, password });
+};
 
 export default function Login() {
   const [formData, setFormData] = useState({

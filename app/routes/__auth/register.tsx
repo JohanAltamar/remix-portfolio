@@ -1,8 +1,56 @@
-import { Link } from "@remix-run/react";
 import { useState } from "react";
+import { Link } from "@remix-run/react";
+import { json } from "@remix-run/node";
+
+import {
+  validateEmail,
+  validateName,
+  validatePassword,
+} from "~/utils/validators.server";
+import { register } from "~/utils/auth.server";
+
+// Types
+import type { ActionFunction } from "@remix-run/node";
 
 // Components
 import { FormField } from "~/components/form-field";
+
+export const action: ActionFunction = async ({ request }) => {
+  const form = await request.formData();
+  const action = "register";
+  const email = form.get("email");
+  const password = form.get("password");
+  let firstName = form.get("firstName");
+  let lastName = form.get("lastName");
+
+  if (
+    typeof email !== "string" ||
+    typeof password !== "string" ||
+    typeof firstName !== "string" ||
+    typeof lastName !== "string"
+  ) {
+    return json({ error: `Invalid Form Data`, form: action }, { status: 400 });
+  }
+
+  const errors = {
+    email: validateEmail(email),
+    password: validatePassword(password),
+    firstName: validateName((firstName as string) || ""),
+    lastName: validateName((lastName as string) || ""),
+  };
+
+  if (Object.values(errors).some(Boolean))
+    return json(
+      {
+        errors,
+        fields: { email, password, firstName, lastName },
+        form: action,
+      },
+      { status: 400 }
+    );
+
+  return await register({ email, password, firstName, lastName });
+};
 
 export default function Register() {
   const [formData, setFormData] = useState({
