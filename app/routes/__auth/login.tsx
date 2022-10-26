@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useActionData } from "@remix-run/react";
+import { Link } from "@remix-run/react";
 import { json, redirect } from "@remix-run/node";
 
 import { validateEmail, validatePassword } from "~/utils/validators.server";
