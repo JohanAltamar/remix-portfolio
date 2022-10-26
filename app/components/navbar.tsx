@@ -4,7 +4,11 @@ import classNames from "classnames";
 // Types
 import type { FC, ReactNode } from "react";
 
-export function Navbar() {
+export interface NavbarProps {
+  isUserAuthenticated: boolean;
+}
+
+export function Navbar({ isUserAuthenticated }: NavbarProps) {
   return (
     <header className="px-10">
       <nav className="flex h-14 items-center">
@@ -16,8 +20,14 @@ export function Navbar() {
           <LinkItem to="/projects">Projects</LinkItem>
           <LinkItem to="/blog">Blog</LinkItem>
         </div>
-        <LinkItem to="/login">Login</LinkItem>
-        <LinkItem to="/register">Register</LinkItem>
+        {isUserAuthenticated ? (
+          <LinkItem to="/logout">Logout</LinkItem>
+        ) : (
+          <>
+            <LinkItem to="/login">Login</LinkItem>
+            <LinkItem to="/register">Register</LinkItem>
+          </>
+        )}
       </nav>
     </header>
   );
