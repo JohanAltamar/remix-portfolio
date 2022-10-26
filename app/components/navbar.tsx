@@ -10,7 +10,7 @@ export interface NavbarProps {
 
 export function Navbar({ isUserAuthenticated }: NavbarProps) {
   return (
-    <header className="px-10">
+    <header className="px-4 md:px-10">
       <nav className="flex h-14 items-center">
         <Link to="/" className="mr-10 py-4 text-2xl font-bold">
           <h1>Johan Altamar</h1>
@@ -42,7 +42,7 @@ interface LinkItemProps {
 const LinkItem: FC<LinkItemProps> = ({ children, className, to }) => {
   const styles = classNames(
     className,
-    "py-4 px-5 transition-all duration-300 hover:bg-black/10"
+    "py-4 px-5 transition-all duration-300 hover:bg-black/10 hidden"
   );
 
   return (
