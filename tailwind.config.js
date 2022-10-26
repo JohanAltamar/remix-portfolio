@@ -4,7 +4,17 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'epilogue': ['"Epilogue"', 'sans-serif'],
+      },
+    },
+    fontFamily: {
+      sans: [
+        "Epilogue, sans-serif",
+        { fontFeatureSettings: '"Epilogue"' },
+      ],
+    },
   },
   plugins: [],
 }
