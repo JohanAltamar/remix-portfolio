@@ -17,14 +17,14 @@ export default function Index() {
   return (
     <Layout className="flex flex-col-reverse">
       <article className="flex-1 flex flex-col px-4">
-        <h2 className="font-bold leading-tight text-3xl sm:text-4xl md:text-6xl mt-10 md:mt-20 mb-6 md:mb-10 text-center md:text-left">
+        <h2 className="font-bold leading-tight text-3xl sm:text-4xl lg:text-6xl mt-10 lg:mt-20 mb-6 lg:mb-10 text-center lg:text-left">
           Frontend Developer
         </h2>
-        <p className="text-center md:text-left sm:text-lg text-gray-500 pr-0 md:pr-48 mb-8 md:mb-14 ">
+        <p className="text-center lg:text-left sm:text-lg text-gray-500 pr-0 lg:pr-48 mb-8 lg:mb-14 ">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi
           tenetur vel quasi ipsum molestiae explicabo, magni incidunt.
         </p>
-        <div className="flex items-start justify-center md:justify-start mb-14">
+        <div className="flex items-start justify-center lg:justify-start mb-14">
           <Link
             to="/about"
             className="bg-black text-white font-bold p-4 rounded-lg mr-4 hover:bg-black/50 transition-all duration-300"
@@ -39,15 +39,15 @@ export default function Index() {
             Download Resume
           </a>
         </div>
-        <div className="flex justify-between mb-10">
-          <figure className="h-11 md:h-14">
+        <div className="flex justify-evenly mb-10">
+          <figure className="h-11 lg:h-14">
             <img
               className="h-full"
               src="/assets/logos/globant.svg"
               alt="globant logo"
             />
           </figure>
-          <figure className="h-11 md:h-14">
+          <figure className="h-11 lg:h-14">
             <img
               className="h-full"
               src="/assets/logos/dmed.png"
@@ -58,7 +58,7 @@ export default function Index() {
       </article>
       <figure>
         <img
-          className="content-hero-sm md:content-hero w-full aspect-[133/100]"
+          className="content-hero-sm lg:content-hero w-full aspect-[133/100]"
           alt="johan profile"
         />
       </figure>

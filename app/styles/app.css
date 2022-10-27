@@ -613,6 +613,14 @@ video {
   justify-content: space-between;
 }
 
+.justify-around{
+  justify-content: space-around;
+}
+
+.justify-evenly{
+  justify-content: space-evenly;
+}
+
 .gap-y-4{
   row-gap: 1rem;
 }
@@ -861,6 +869,51 @@ video {
   }
 
   .md\:content-hero{
+    --tw-content: url("/assets/images/hero-desktop.png");
+    content: var(--tw-content);
+  }
+}
+
+@media (min-width: 1024px){
+  .lg\:mt-20{
+    margin-top: 5rem;
+  }
+
+  .lg\:mb-10{
+    margin-bottom: 2.5rem;
+  }
+
+  .lg\:mb-14{
+    margin-bottom: 3.5rem;
+  }
+
+  .lg\:h-14{
+    height: 3.5rem;
+  }
+
+  .lg\:justify-start{
+    justify-content: flex-start;
+  }
+
+  .lg\:px-10{
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .lg\:pr-48{
+    padding-right: 12rem;
+  }
+
+  .lg\:text-left{
+    text-align: left;
+  }
+
+  .lg\:text-6xl{
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
+  .lg\:content-hero{
     --tw-content: url("/assets/images/hero-desktop.png");
     content: var(--tw-content);
   }
