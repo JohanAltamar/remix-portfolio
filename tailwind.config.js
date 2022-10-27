@@ -8,6 +8,10 @@ module.exports = {
       fontFamily: {
         'epilogue': ['"Epilogue"', 'sans-serif'],
       },
+      content: {
+        'hero': 'url("/assets/images/hero-desktop.png")',
+        'hero-sm': 'url("/assets/images/hero-mobile.png")',
+      },
     },
     fontFamily: {
       sans: [

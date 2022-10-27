@@ -521,12 +521,48 @@ video {
   margin-right: 2.5rem;
 }
 
+.mt-10{
+  margin-top: 2.5rem;
+}
+
+.mb-6{
+  margin-bottom: 1.5rem;
+}
+
+.mb-8{
+  margin-bottom: 2rem;
+}
+
+.mb-14{
+  margin-bottom: 3.5rem;
+}
+
+.mr-4{
+  margin-right: 1rem;
+}
+
+.mb-10{
+  margin-bottom: 2.5rem;
+}
+
 .mt-2{
   margin-top: 0.5rem;
 }
 
 .flex{
   display: flex;
+}
+
+.hidden{
+  display: none;
+}
+
+.aspect-\[133\/100\]{
+  aspect-ratio: 133/100;
+}
+
+.h-screen{
+  height: 100vh;
 }
 
 .h-14{
@@ -537,8 +573,8 @@ video {
   height: 100%;
 }
 
-.h-screen{
-  height: 100vh;
+.h-11{
+  height: 2.75rem;
 }
 
 .w-full{
@@ -557,12 +593,24 @@ video {
   flex-direction: column;
 }
 
+.flex-col-reverse{
+  flex-direction: column-reverse;
+}
+
+.items-start{
+  align-items: flex-start;
+}
+
 .items-center{
   align-items: center;
 }
 
 .justify-center{
   justify-content: center;
+}
+
+.justify-between{
+  justify-content: space-between;
 }
 
 .gap-y-4{
@@ -573,18 +621,27 @@ video {
   border-radius: 0.75rem;
 }
 
+.rounded-lg{
+  border-radius: 0.5rem;
+}
+
 .rounded-2xl{
   border-radius: 1rem;
 }
 
-.bg-gray-200{
+.bg-black{
   --tw-bg-opacity: 1;
-  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .bg-blue-600{
   --tw-bg-opacity: 1;
   background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+}
+
+.bg-gray-200{
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
 .bg-yellow-300{
@@ -596,13 +653,17 @@ video {
   padding: 0.5rem;
 }
 
+.p-4{
+  padding: 1rem;
+}
+
 .p-6{
   padding: 1.5rem;
 }
 
-.px-10{
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+.px-4{
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .py-4{
@@ -625,12 +686,12 @@ video {
   padding-bottom: 0.5rem;
 }
 
-.text-center{
-  text-align: center;
+.pr-0{
+  padding-right: 0px;
 }
 
-.font-epilogue{
-  font-family: "Epilogue", sans-serif;
+.text-center{
+  text-align: center;
 }
 
 .text-xs{
@@ -641,6 +702,11 @@ video {
 .text-2xl{
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-3xl{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .text-5xl{
@@ -660,6 +726,10 @@ video {
   font-weight: 800;
 }
 
+.leading-tight{
+  line-height: 1.25;
+}
+
 .tracking-wide{
   letter-spacing: 0.025em;
 }
@@ -672,6 +742,16 @@ video {
 .text-red-500{
   --tw-text-opacity: 1;
   color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
+.text-gray-500{
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
+.text-white{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .text-yellow-300{
@@ -706,6 +786,11 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.content-hero-sm{
+  --tw-content: url("/assets/images/hero-mobile.png");
+  content: var(--tw-content);
+}
+
 .hover\:-translate-y-1:hover{
   --tw-translate-y: -0.25rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -715,7 +800,68 @@ video {
   background-color: rgb(0 0 0 / 0.1);
 }
 
+.hover\:bg-black\/50:hover{
+  background-color: rgb(0 0 0 / 0.5);
+}
+
 .hover\:bg-yellow-400:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(250 204 21 / var(--tw-bg-opacity));
+}
+
+@media (min-width: 640px){
+  .sm\:text-4xl{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .sm\:text-lg{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 768px){
+  .md\:mt-20{
+    margin-top: 5rem;
+  }
+
+  .md\:mb-10{
+    margin-bottom: 2.5rem;
+  }
+
+  .md\:mb-14{
+    margin-bottom: 3.5rem;
+  }
+
+  .md\:h-14{
+    height: 3.5rem;
+  }
+
+  .md\:justify-start{
+    justify-content: flex-start;
+  }
+
+  .md\:px-10{
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .md\:pr-48{
+    padding-right: 12rem;
+  }
+
+  .md\:text-left{
+    text-align: left;
+  }
+
+  .md\:text-6xl{
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
+  .md\:content-hero{
+    --tw-content: url("/assets/images/hero-desktop.png");
+    content: var(--tw-content);
+  }
 }

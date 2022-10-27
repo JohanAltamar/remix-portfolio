@@ -40,7 +40,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="flex flex-col h-screen">
         <Navbar isUserAuthenticated={isUserAuthenticated} />
         <Outlet />
         <ScrollRestoration />
