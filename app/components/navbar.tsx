@@ -42,7 +42,7 @@ interface LinkItemProps {
 const LinkItem: FC<LinkItemProps> = ({ children, className, to }) => {
   const styles = classNames(
     className,
-    "py-4 px-5 transition-all duration-300 hover:bg-black/10 hidden"
+    "py-4 px-5 transition-all duration-300 hover:bg-black/10 hidden lg:block"
   );
 
   return (

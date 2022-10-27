@@ -549,6 +549,10 @@ video {
   margin-top: 0.5rem;
 }
 
+.mr-8{
+  margin-right: 2rem;
+}
+
 .flex{
   display: flex;
 }
@@ -607,14 +611,6 @@ video {
 
 .justify-center{
   justify-content: center;
-}
-
-.justify-between{
-  justify-content: space-between;
-}
-
-.justify-around{
-  justify-content: space-around;
 }
 
 .justify-evenly{
@@ -830,51 +826,29 @@ video {
 }
 
 @media (min-width: 768px){
-  .md\:mt-20{
-    margin-top: 5rem;
-  }
-
-  .md\:mb-10{
-    margin-bottom: 2.5rem;
-  }
-
-  .md\:mb-14{
-    margin-bottom: 3.5rem;
-  }
-
-  .md\:h-14{
-    height: 3.5rem;
-  }
-
-  .md\:justify-start{
-    justify-content: flex-start;
-  }
-
   .md\:px-10{
     padding-left: 2.5rem;
     padding-right: 2.5rem;
   }
-
-  .md\:pr-48{
-    padding-right: 12rem;
-  }
-
-  .md\:text-left{
-    text-align: left;
-  }
-
-  .md\:text-6xl{
-    font-size: 3.75rem;
-    line-height: 1;
-  }
-
-  .md\:content-hero{
-    --tw-content: url("/assets/images/hero-desktop.png");
-    content: var(--tw-content);
-  }
 }
 
 @media (min-width: 1024px){
+  .lg\:col-span-5{
+    grid-column: span 5 / span 5;
+  }
+
+  .lg\:col-span-4{
+    grid-column: span 4 / span 4;
+  }
+
+  .lg\:col-start-2{
+    grid-column-start: 2;
+  }
+
+  .lg\:col-start-8{
+    grid-column-start: 8;
+  }
+
   .lg\:mt-20{
     margin-top: 5rem;
   }
@@ -887,17 +861,57 @@ video {
     margin-bottom: 3.5rem;
   }
 
+  .lg\:mt-0{
+    margin-top: 0px;
+  }
+
+  .lg\:block{
+    display: block;
+  }
+
+  .lg\:grid{
+    display: grid;
+  }
+
+  .lg\:aspect-auto{
+    aspect-ratio: auto;
+  }
+
   .lg\:h-14{
     height: 3.5rem;
+  }
+
+  .lg\:flex-auto{
+    flex: 1 1 auto;
+  }
+
+  .lg\:flex-none{
+    flex: none;
+  }
+
+  .lg\:flex-initial{
+    flex: 0 1 auto;
+  }
+
+  .lg\:flex-grow-0{
+    flex-grow: 0;
+  }
+
+  .lg\:grid-cols-12{
+    grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 
   .lg\:justify-start{
     justify-content: flex-start;
   }
 
-  .lg\:px-10{
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+  .lg\:justify-center{
+    justify-content: center;
+  }
+
+  .lg\:px-0{
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .lg\:pr-48{
@@ -916,5 +930,15 @@ video {
   .lg\:content-hero{
     --tw-content: url("/assets/images/hero-desktop.png");
     content: var(--tw-content);
+  }
+}
+
+@media (min-width: 1280px){
+  .xl\:mr-8{
+    margin-right: 2rem;
+  }
+
+  .xl\:mb-20{
+    margin-bottom: 5rem;
   }
 }
