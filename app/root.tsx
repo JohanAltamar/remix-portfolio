@@ -25,6 +25,7 @@ export const meta: MetaFunction = () => ({
   charset: "utf-8",
   title: "New Remix App",
   viewport: "width=device-width,initial-scale=1",
+  "google-site-verification": "59QbTyly9xoEFuFLWsC6swG_IAmr6DnDu-gOXhbvc0Q",
 });
 
 export const loader: LoaderFunction = async ({ request }) => {
